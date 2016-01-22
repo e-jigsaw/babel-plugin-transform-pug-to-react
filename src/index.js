@@ -1,7 +1,7 @@
-import {render} from 'jade'
-import {transform} from 'babel-core'
+const {render} = require('jade')
+const {transform} = require('babel-core')
 
-export default function ({types: t}) {
+module.exports = function () {
   return {
     visitor: {
       TemplateLiteral (path, state) {
