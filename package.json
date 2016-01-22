@@ -24,5 +24,13 @@
   },
   "ava": {
     "require": "babel-core/register"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-jigsaw/babel-plugin-transform-jade-to-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/e-jigsaw/babel-plugin-transform-jade-to-react/issues"
+  },
+  "homepage": "https://github.com/e-jigsaw/babel-plugin-transform-jade-to-react#readme"
 }
