@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build": "babel src -d $npm_package_config_DEST",
+    "prepublish": "npm run build",
     "test": "ava --tap"
   },
   "author": "jigsaw (http://jgs.me)",
