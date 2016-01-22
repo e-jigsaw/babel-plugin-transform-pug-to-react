@@ -3,6 +3,137 @@ babel-plugin-transform-jade-to-react
 
 Babel plugin for jade to react
 
+# Usage
+
+```js
+jade`.simple(data='{yoyo}')`
+
+// compiles to
+
+React.createElement("div", {
+  data: yoyo,
+  className: "simple"
+});
+```
+
+## Difference from jade
+
+http://jade-lang.com/reference
+
+### Attributes
+
+`some='{this.props.some}'`
+
+### Case
+
+```js
+switch (this.props.some) {
+  case 'a': {
+    return jade`p hoge`
+  }
+  case 'b': {
+    return jade`p fuga`
+  }
+}
+```
+
+### Code
+
+```js
+this.props.xs.map((x) => {
+  return jade`p(x='{x}')`
+})
+```
+
+### Comments
+
+If you want.
+
+### Conditionals
+
+```js
+if (this.props.some) {
+  return jade`p xxx`
+} else {
+  return jade`p yyy`
+}
+```
+
+### Doctype
+
+If you want.
+
+### Extends
+
+?
+
+### Filters
+
+?
+
+### Includes
+
+?
+
+### Template inheritance
+
+?
+
+### Interpolation
+
+Do not use
+
+### Iteration
+
+```js
+this.props.xs.map((x) => {
+  return jade`p(x='{x}')`
+})
+```
+
+### Mixins
+
+?
+
+### Plain Text
+
+:+1:
+
+### Tags
+
+?
+
+## With Browserify
+
+```sh
+$ browserify -t [ babelify --plugins [ transform-jade-to-react ] ] file
+```
+
+with ES2015
+
+Example:
+
+```
+import React from 'react'
+import Foo from './foo.js'
+
+export default class App extends React.Component {
+  constructor () {
+    super()
+  }
+
+  render () {
+    return jade`
+.awesome#app
+  Foo`
+  }
+}
+```
+
+```sh
+$ browserify -t [ babelify --plugins [ transform-jade-to-react ] ] -t [ babelify --presets [ es2015 ] ] file
+```
+
 # Installation
 
 ```sh
