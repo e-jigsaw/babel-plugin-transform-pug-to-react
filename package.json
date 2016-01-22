@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-jade-to-react",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Babel plugin for jade to react",
   "main": "build/index.js",
   "config": {
