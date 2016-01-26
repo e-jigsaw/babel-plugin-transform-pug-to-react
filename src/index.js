@@ -11,7 +11,7 @@ module.exports = function () {
             const html =
               render(raw)
                 .replace(/"\{/g, '{').replace(/\}"/g, '}')
-                .replace(/class="/g, 'className="').replace(/for="/, 'htmlFor="')
+                .replace(/class="/g, 'className="').replace(/for="/g, 'htmlFor="')
             const {code} = transform(html, {
               presets: ['react']
             })
