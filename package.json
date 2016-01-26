@@ -33,5 +33,13 @@
   "bugs": {
     "url": "https://github.com/e-jigsaw/babel-plugin-transform-jade-to-react/issues"
   },
-  "homepage": "https://github.com/e-jigsaw/babel-plugin-transform-jade-to-react#readme"
+  "homepage": "https://github.com/e-jigsaw/babel-plugin-transform-jade-to-react#readme",
+  "keywords": [
+    "babel",
+    "babel-plugin",
+    "react",
+    "jade",
+    "template",
+    "html"
+  ]
 }
