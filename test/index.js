@@ -45,3 +45,23 @@ test('Transform jade literal(complex)', (t) => {
   htmlFor: "id"
 }));`, res.code)
 })
+
+test('Transform jade literal(indent)', (t) => {
+  const indent = loadFixture('indent')
+  const res = transform(indent, {
+    plugins: [plugin]
+  })
+  t.is(`React.createElement("div", {
+  data: yoyo,
+  className: "indent"
+}, React.createElement(Foo, {
+  fuga: this.props.fuga
+}), React.createElement(Bar, {
+  bar: this.props.bar
+}, React.createElement("input", {
+  id: "id",
+  required: "required"
+}), React.createElement("label", {
+  htmlFor: "id"
+})));`, res.code)
+})
