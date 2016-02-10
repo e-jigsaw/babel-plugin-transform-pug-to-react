@@ -124,8 +124,9 @@ export default class App extends React.Component {
 
   render () {
     return jade`
-.awesome#app
-  Foo`
+      .awesome#app
+        Foo
+    `
   }
 }
 ```
