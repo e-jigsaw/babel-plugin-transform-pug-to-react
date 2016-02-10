@@ -113,7 +113,7 @@ with ES2015
 
 Example:
 
-```
+```js
 import React from 'react'
 import Foo from './foo.js'
 
