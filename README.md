@@ -131,7 +131,7 @@ export default class App extends React.Component {
 ```
 
 ```sh
-$ browserify -t [ babelify --plugins [ transform-jade-to-react ] ] -t [ babelify --presets [ es2015 ] ] file
+$ browserify -t [ babelify --plugins [ transform-jade-to-react ] --presets [ es2015 ] ] file
 ```
 
 # Installation
