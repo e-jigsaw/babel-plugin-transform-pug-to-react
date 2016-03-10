@@ -14,7 +14,7 @@
   "author": "jigsaw (http://jgs.me)",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.12.0",
+    "ava": "^0.13.0",
     "babel-cli": "^6.5.1",
     "babel-preset-es2015": "^6.5.0"
   },
