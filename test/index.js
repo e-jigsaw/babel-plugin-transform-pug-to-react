@@ -15,25 +15,25 @@ if (process.env.CI === 'true') {
   plugin = '../build/index'
 }
 
-test('Transform jade literal', (t) => {
+test('Transform pug literal', (t) => {
   const simple = loadFixture('simple')
   const res = transform(simple, {
     plugins: [plugin]
   })
-  t.is(`React.createElement("div", {
-  data: yoyo,
-  className: "simple"
-});`, res.code)
+  t.is(res.code, `React.createElement("div", {
+  className: "simple",
+  data: yoyo
+});`)
 })
 
-test('Transform jade literal(complex)', (t) => {
+test('Transform pug literal(complex)', (t) => {
   const complex = loadFixture('complex')
   const res = transform(complex, {
     plugins: [plugin]
   })
-  t.is(`React.createElement("div", {
-  data: yoyo,
-  className: "complex"
+  t.is(res.code, `React.createElement("div", {
+  className: "complex",
+  data: yoyo
 }, React.createElement(Foo, {
   fuga: this.props.fuga
 }), React.createElement(Bar, {
@@ -43,17 +43,17 @@ test('Transform jade literal(complex)', (t) => {
   required: "required"
 }), React.createElement("label", {
   htmlFor: "id"
-}));`, res.code)
+}));`)
 })
 
-test('Transform jade literal(indent)', (t) => {
+test('Transform pug literal(indent)', (t) => {
   const indent = loadFixture('indent')
   const res = transform(indent, {
     plugins: [plugin]
   })
-  t.is(`React.createElement("div", {
-  data: yoyo,
-  className: "indent"
+  t.is(res.code, `React.createElement("div", {
+  className: "indent",
+  data: yoyo
 }, React.createElement(Foo, {
   fuga: this.props.fuga
 }), React.createElement(Bar, {
@@ -63,5 +63,5 @@ test('Transform jade literal(indent)', (t) => {
   required: "required"
 }), React.createElement("label", {
   htmlFor: "id"
-})));`, res.code)
+})));`)
 })

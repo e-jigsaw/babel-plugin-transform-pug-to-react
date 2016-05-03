@@ -1,12 +1,12 @@
-babel-plugin-transform-jade-to-react
+babel-plugin-transform-pug-to-react
 ====================================
 
-Babel plugin for jade to react
+Babel plugin for pug to react
 
 # Usage
 
 ```js
-jade`.simple(data='{yoyo}')`
+pug`.simple(data='{yoyo}')`
 
 // compiles to
 
@@ -16,7 +16,7 @@ React.createElement("div", {
 });
 ```
 
-## Difference from jade
+## Difference from pug
 
 http://jade-lang.com/reference
 
@@ -29,10 +29,10 @@ http://jade-lang.com/reference
 ```js
 switch (this.props.some) {
   case 'a': {
-    return jade`p hoge`
+    return pug`p hoge`
   }
   case 'b': {
-    return jade`p fuga`
+    return pug`p fuga`
   }
 }
 ```
@@ -41,7 +41,7 @@ switch (this.props.some) {
 
 ```js
 this.props.xs.map((x) => {
-  return jade`p(x='{x}')`
+  return pug`p(x='{x}')`
 })
 ```
 
@@ -53,9 +53,9 @@ If you want.
 
 ```js
 if (this.props.some) {
-  return jade`p xxx`
+  return pug`p xxx`
 } else {
-  return jade`p yyy`
+  return pug`p yyy`
 }
 ```
 
@@ -87,7 +87,7 @@ Do not use
 
 ```js
 this.props.xs.map((x) => {
-  return jade`p(x='{x}')`
+  return pug`p(x='{x}')`
 })
 ```
 
@@ -106,7 +106,7 @@ this.props.xs.map((x) => {
 ## With Browserify
 
 ```sh
-$ browserify -t [ babelify --plugins [ transform-jade-to-react ] ] file
+$ browserify -t [ babelify --plugins [ transform-pug-to-react ] ] file
 ```
 
 with ES2015
@@ -123,7 +123,7 @@ export default class App extends React.Component {
   }
 
   render () {
-    return jade`
+    return pug`
       .awesome#app
         Foo
     `
@@ -132,13 +132,13 @@ export default class App extends React.Component {
 ```
 
 ```sh
-$ browserify -t [ babelify --plugins [ transform-jade-to-react ] --presets [ es2015 ] ] file
+$ browserify -t [ babelify --plugins [ transform-pug-to-react ] --presets [ es2015 ] ] file
 ```
 
 # Installation
 
 ```sh
-% npm install babel-plugin-transform-jade-to-react
+% npm install babel-plugin-transform-pug-to-react
 ```
 
 # Requirements

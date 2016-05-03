@@ -1,1 +1,1 @@
-jade`.simple(data='{yoyo}')`
+pug`.simple(data='{yoyo}')`

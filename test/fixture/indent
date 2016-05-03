@@ -1,4 +1,4 @@
-jade`
+pug`
         .indent(data='{yoyo}')
           Foo(fuga='{this.props.fuga}')
           Bar(bar='{this.props.bar}')
