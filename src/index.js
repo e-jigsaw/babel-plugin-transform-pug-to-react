@@ -1,11 +1,11 @@
-const {render} = require('jade')
+const {render} = require('pug')
 const {transform} = require('babel-core')
 
 module.exports = function () {
   return {
     visitor: {
       TaggedTemplateExpression (path, state) {
-        if (path.node.tag.name === 'jade') {
+        if (path.node.tag.name === 'pug') {
           const {raw} = path.node.quasi.quasis[0].value
           const splitedRaw = raw.split('\n').filter((str) => {return str !== ''})
           const rootIndent = /^\s*/.exec(splitedRaw[0])[0]
