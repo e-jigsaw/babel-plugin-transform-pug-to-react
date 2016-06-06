@@ -17,10 +17,10 @@ module.exports = function () {
             render(fixedRaw)
               .replace(/"\{/g, '{').replace(/\}"/g, '}')
               .replace(/class="/g, 'className="').replace(/for="/g, 'htmlFor="')
-          const {code} = transform(html, {
+          const {ast} = transform(html, {
             presets: ['react']
           })
-          path.replaceWithSourceString(code.replace(/;/g, ''))
+          path.replaceWithMultiple(ast.program.body)
         }
       }
     }
