@@ -103,6 +103,16 @@ this.props.xs.map((x) => {
 
 ?
 
+### Nested
+
+Use with backslash
+
+```js
+pug`
+  div {xs.map(x => pug\`span {x}\`)}
+`
+```
+
 ## With Browserify
 
 ```sh
