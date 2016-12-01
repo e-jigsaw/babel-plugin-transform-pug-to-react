@@ -3,6 +3,9 @@ babel-plugin-transform-pug-to-react
 
 Babel plugin for pug to react
 
+[![npm version](https://badge.fury.io/js/babel-transform-pug-to-react.svg)](http://badge.fury.io/js/babel-transform-pug-to-react) [![wercker status](https://app.wercker.com/status/339b819cccde17da5bd11b4968df2df2/s/master "wercker status")](https://app.wercker.com/project/byKey/339b819cccde17da5bd11b4968df2df2)
+[![dependency Status](https://david-dm.org/e-jigsaw/babel-transform-pug-to-react/status.svg)](https://david-dm.org/e-jigsaw/babel-transform-pug-to-react) [![devDependency Status](https://david-dm.org/e-jigsaw/babel-transform-pug-to-react/dev-status.svg)](https://david-dm.org/e-jigsaw/babel-transform-pug-to-react#info=devDependencies)
+
 # Usage
 
 ```js
