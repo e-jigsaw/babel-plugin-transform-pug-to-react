@@ -3,7 +3,7 @@ import {transform} from 'babel-core'
 import {readFileSync} from 'fs'
 import {resolve} from 'path'
 
-const loadFixture = (filename) => {
+const loadFixture = filename => {
   return readFileSync(
     resolve(__dirname, `./fixture/${filename}`)
   ).toString()
@@ -15,7 +15,7 @@ if (process.env.CI === 'true') {
   plugin = '../build/index'
 }
 
-test('Transform pug literal', (t) => {
+test('Transform pug literal', t => {
   const simple = loadFixture('simple')
   const res = transform(simple, {
     plugins: [plugin]
@@ -26,7 +26,7 @@ test('Transform pug literal', (t) => {
   )
 })
 
-test('Transform pug literal(complex)', (t) => {
+test('Transform pug literal(complex)', t => {
   const complex = loadFixture('complex')
   const res = transform(complex, {
     plugins: [plugin]
@@ -42,7 +42,7 @@ test('Transform pug literal(complex)', (t) => {
 );`)
 })
 
-test('Transform pug literal(indent)', (t) => {
+test('Transform pug literal(indent)', t => {
   const indent = loadFixture('indent')
   const res = transform(indent, {
     plugins: [plugin]
@@ -57,5 +57,23 @@ test('Transform pug literal(indent)', (t) => {
     React.createElement("input", { id: "id", required: "required" }),
     React.createElement("label", { htmlFor: "id" })
   )
+);`)
+})
+
+test('Transform nested', t => {
+  const nested = loadFixture('nested')
+  const res = transform(nested, {
+    plugins: [plugin]
+  })
+  t.is(
+    res.code,
+    `React.createElement(
+  "div",
+  { className: "nested" },
+  foo.map(bar => React.createElement(
+    "span",
+    null,
+    bar
+  ))
 );`)
 })

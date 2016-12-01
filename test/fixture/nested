@@ -1,0 +1,3 @@
+pug`
+.nested {foo.map(bar => pug\`span {bar}\`)}
+`
