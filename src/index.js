@@ -17,6 +17,7 @@ module.exports = function () {
             render(fixedRaw)
               .replace(/"\{/g, '{').replace(/\}"/g, '}')
               .replace(/class="/g, 'className="').replace(/for="/g, 'htmlFor="')
+              .replace(/\\\`/g, '`')
           const {ast} = transform(html, {
             presets: ['react']
           })
