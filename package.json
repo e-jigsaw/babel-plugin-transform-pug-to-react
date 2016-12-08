@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-transform-pug-to-react",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Babel plugin for pug to react",
   "main": "build/index.js",
   "config": {
