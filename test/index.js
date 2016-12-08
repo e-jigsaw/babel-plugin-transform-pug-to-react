@@ -60,6 +60,14 @@ test('Transform pug literal(indent)', t => {
 );`)
 })
 
+test('Transform pug literal(indent1)', t => {
+  const indent1 = loadFixture('indent1')
+  const res = transform(indent1, {
+    plugins: [plugin]
+  })
+  t.is(res.code, `React.createElement("div", { className: "foo" });`)
+})
+
 test('Transform nested', t => {
   const nested = loadFixture('nested')
   const res = transform(nested, {

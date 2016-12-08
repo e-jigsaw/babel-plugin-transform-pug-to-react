@@ -7,9 +7,11 @@ module.exports = function () {
       TaggedTemplateExpression (path, state) {
         if (path.node.tag.name === 'pug') {
           const {raw} = path.node.quasi.quasis[0].value
-          const splitedRaw = raw.split('\n').filter((str) => {return str !== ''})
+          const splitedRaw = raw.split('\n').filter(str =>
+            str !== '' && str.match(/^\s*$/g) === null
+          )
           const rootIndent = /^\s*/.exec(splitedRaw[0])[0]
-          const fixedRaw = splitedRaw.map((raw) => {
+          const fixedRaw = splitedRaw.map(raw => {
             const spaceRegExp = new RegExp(`^${rootIndent}`)
             return raw.replace(spaceRegExp, '')
           }).join('\n')
