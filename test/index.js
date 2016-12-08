@@ -56,7 +56,8 @@ test('Transform pug literal(indent)', t => {
     { bar: this.props.bar },
     React.createElement("input", { id: "id", required: "required" }),
     React.createElement("label", { htmlFor: "id" })
-  )
+  ),
+  "text"
 );`)
 })
 
