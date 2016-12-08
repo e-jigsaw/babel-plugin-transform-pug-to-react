@@ -9,22 +9,19 @@
   "scripts": {
     "build": "babel src -d $npm_package_config_DEST",
     "prepublish": "npm run build",
-    "test": "ava --tap"
+    "test": "node test/index.js"
   },
   "author": "jigsaw (http://jgs.me)",
   "license": "MIT",
   "devDependencies": {
-    "ava": "^0.15.2",
-    "babel-cli": "^6.9.0",
-    "babel-preset-es2015": "^6.9.0"
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "tape": "^4.6.3"
   },
   "dependencies": {
-    "babel-core": "^6.9.1",
-    "babel-preset-react": "^6.5.0",
-    "pug": "^2.0.0-beta2"
-  },
-  "ava": {
-    "require": "babel-core/register"
+    "babel-core": "^6.18.2",
+    "babel-preset-react": "^6.16.0",
+    "pug": "^2.0.0-beta6"
   },
   "repository": {
     "type": "git",

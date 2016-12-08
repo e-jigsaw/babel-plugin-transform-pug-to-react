@@ -1,7 +1,7 @@
-import test from 'ava'
-import {transform} from 'babel-core'
-import {readFileSync} from 'fs'
-import {resolve} from 'path'
+const test = require('tape')
+const {transform} = require('babel-core')
+const {readFileSync} = require('fs')
+const {resolve} = require('path')
 
 const loadFixture = filename => {
   return readFileSync(
@@ -9,13 +9,14 @@ const loadFixture = filename => {
   ).toString()
 }
 
-let plugin = '../src/index'
+let plugin = resolve(__dirname, '../src/index.js')
 
 if (process.env.CI === 'true') {
-  plugin = '../build/index'
+  plugin = resolve(__dirname, '../build/index.js')
 }
 
 test('Transform pug literal', t => {
+  t.plan(1)
   const simple = loadFixture('simple')
   const res = transform(simple, {
     plugins: [plugin]
@@ -27,6 +28,7 @@ test('Transform pug literal', t => {
 })
 
 test('Transform pug literal(complex)', t => {
+  t.plan(1)
   const complex = loadFixture('complex')
   const res = transform(complex, {
     plugins: [plugin]
@@ -43,6 +45,7 @@ test('Transform pug literal(complex)', t => {
 })
 
 test('Transform pug literal(indent)', t => {
+  t.plan(1)
   const indent = loadFixture('indent')
   const res = transform(indent, {
     plugins: [plugin]
@@ -61,6 +64,7 @@ test('Transform pug literal(indent)', t => {
 })
 
 test('Transform pug literal(indent1)', t => {
+  t.plan(1)
   const indent1 = loadFixture('indent1')
   const res = transform(indent1, {
     plugins: [plugin]
@@ -69,6 +73,7 @@ test('Transform pug literal(indent1)', t => {
 })
 
 test('Transform nested', t => {
+  t.plan(1)
   const nested = loadFixture('nested')
   const res = transform(nested, {
     plugins: [plugin]
