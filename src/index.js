@@ -17,7 +17,7 @@ module.exports = function () {
           }).join('\n')
           const html =
             render(fixedRaw)
-              .replace(/"\{/g, '{').replace(/\}"/g, '}')
+              .replace(/"\{/g, '{').replace(/\}"/g, '}').replace(/\};"/g, '}')
               .replace(/class="/g, 'className="').replace(/for="/g, 'htmlFor="')
               .replace(/\\\`/g, '`')
           const {ast} = transform(html, {
