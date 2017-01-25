@@ -1,6 +1,8 @@
 babel-plugin-transform-pug-to-react
 ====================================
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/e-jigsaw/babel-plugin-transform-pug-to-react.svg)](https://greenkeeper.io/)
+
 Babel plugin for pug to react
 
 [![npm version](https://badge.fury.io/js/babel-plugin-transform-pug-to-react.svg)](http://badge.fury.io/js/babel-plugin-transform-pug-to-react) [![wercker status](https://app.wercker.com/status/339b819cccde17da5bd11b4968df2df2/s/master "wercker status")](https://app.wercker.com/project/byKey/339b819cccde17da5bd11b4968df2df2)
