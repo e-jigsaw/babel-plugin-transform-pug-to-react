@@ -38,9 +38,9 @@ test('Transform pug literal(complex)', t => {
   { className: "complex", data: yoyo },
   React.createElement(Foo, { fuga: this.props.fuga }),
   React.createElement(Bar, { bar: this.props.bar }),
-  React.createElement("input", { id: "id", required: "required"
-  }),
-  React.createElement("label", { htmlFor: "id" })
+  React.createElement("input", { id: "id", required: "required" }),
+  React.createElement("label", { htmlFor: "id" }),
+  React.createElement("div", { id: "piyo", style: this.getStyle() })
 );`)
 })
 
