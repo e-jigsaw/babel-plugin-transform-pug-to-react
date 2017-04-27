@@ -20,6 +20,8 @@ module.exports = function () {
               .replace(/"\{/g, '{').replace(/\}"/g, '}').replace(/\};"/g, '}')
               .replace(/class="/g, 'className="').replace(/for="/g, 'htmlFor="')
               .replace(/\\\`/g, '`')
+              .replace(/<!--/g, '{/*')
+              .replace(/-->/g, '*/}')
           const {ast} = transform(html, {
             presets: ['react']
           })
