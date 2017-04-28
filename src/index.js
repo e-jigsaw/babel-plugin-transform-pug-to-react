@@ -1,5 +1,6 @@
 const {render} = require('pug')
 const {transform} = require('babel-core')
+const transformInlineStyle = require('./inline-style-transformer');
 
 module.exports = function () {
   return {
@@ -22,7 +23,8 @@ module.exports = function () {
               .replace(/\\\`/g, '`')
               .replace(/<!--/g, '{/*')
               .replace(/-->/g, '*/}')
-          const {ast} = transform(html, {
+          const _html = transformInlineStyle(html);
+          const {ast} = transform(_html, {
             presets: ['react']
           })
           path.replaceWithMultiple(ast.program.body)
