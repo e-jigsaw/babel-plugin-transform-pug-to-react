@@ -90,3 +90,18 @@ test('Transform nested', t => {
   ))
 );`)
 })
+
+test('Transform nested', t => {
+  t.plan(1)
+  const nested = loadFixture('comment')
+  const res = transform(nested, {
+    plugins: [plugin]
+  })
+  t.is(
+    res.code,
+    `{/* comment*/}React.createElement(
+  "div",
+  { className: "comment" },
+  React.createElement("div", { className: "foo" })
+);`)
+})

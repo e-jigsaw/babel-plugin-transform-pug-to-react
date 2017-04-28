@@ -1,0 +1,6 @@
+pug`
+  // comment
+  .comment
+    // comment
+    .foo
+`

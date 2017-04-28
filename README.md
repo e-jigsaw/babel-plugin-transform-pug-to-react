@@ -173,6 +173,7 @@ $ browserify -t [ babelify --plugins [ transform-pug-to-react ] --presets [ es20
 # Author
 
 * jigsaw (http://jgs.me, [@e-jigsaw](http://github.com/e-jigsaw))
+* And contributors!!
 
 # License
 
