@@ -14,19 +14,16 @@
   "author": "jigsaw (http://jgs.me)",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.22.2",
-    "babel-preset-es2015": "^6.22.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "tape": "^4.6.3"
   },
   "dependencies": {
-    "babel-core": "^6.22.1",
-    "babel-preset-react": "^6.22.0",
-    "pug": "^2.0.0-beta8"
+    "babel-core": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "pug": "^2.0.0-beta12"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/e-jigsaw/babel-plugin-transform-pug-to-react.git"
-  },
+  "repository": "git+https://github.com/e-jigsaw/babel-plugin-transform-pug-to-react.git",
   "bugs": {
     "url": "https://github.com/e-jigsaw/babel-plugin-transform-pug-to-react/issues"
   },
