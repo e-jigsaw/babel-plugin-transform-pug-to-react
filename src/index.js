@@ -16,10 +16,12 @@ module.exports = function () {
             return raw.replace(spaceRegExp, '')
           }).join('\n')
           const html =
-            render(fixedRaw)
+            render(fixedRaw, state.opts)
               .replace(/"\{/g, '{').replace(/\}"/g, '}').replace(/\};"/g, '}')
               .replace(/class="/g, 'className="').replace(/for="/g, 'htmlFor="')
               .replace(/\\\`/g, '`')
+              .replace(/<!--/g, '{/*')
+              .replace(/-->/g, '*/}')
           const {ast} = transform(html, {
             presets: ['react']
           })
