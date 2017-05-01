@@ -30,6 +30,18 @@ http://jade-lang.com/reference
 
 `some='{this.props.some}'`
 
+#### Styles
+
+Refer object
+
+* `style='{style}'`
+
+Write directly
+
+* `style='{{margin: 0}}'`
+* `style="{{margin: space + 'em'}}"`
+
+
 ### Case
 
 ```js
@@ -67,7 +79,7 @@ if (this.props.some) {
 
 ### Doctype
 
-If you want.
+JSX do not support Doctype
 
 ### Extends
 
